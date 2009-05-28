@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark">
+
+  <Metadata>
+    [HostComponent("com.smartlogicsolutions.components.LoginForm")]
+  </Metadata>
+  
+  <s:states>
+    <s:State name="login" />
+    <s:State name="loggingIn" stateGroups="notLogin" />
+    <s:State name="loggedIn" stateGroups="notLogin" />
+  </s:states>
+  
+  <s:VGroup>
+  
+    <s:HGroup left="0" right="0" verticalAlign="middle">
+    
+      <s:SimpleText id="loginFieldLabel" fontWeight="bold" />
+    
+      <s:TextInput id="loginField" enabled.notLogin="false"  />
+    
+    </s:HGroup>
+    
+    <s:HGroup left="0" right="0" verticalAlign="middle">
+    
+      <s:SimpleText id="passwordFieldLabel" fontWeight="bold" />
+    
+      <s:TextInput id="passwordField" enabled.notLogin="false" />
+    
+    </s:HGroup>
+    
+    <s:Button id="loginButton" label="Login" enabled.notLogin="false" />
+    
+    <s:SimpleText id="loginMessage" excludeFrom="login"
+                  text="{hostComponent.loginMessageLabel}" />
+  
+  </s:VGroup>
+  
+</s:Skin>

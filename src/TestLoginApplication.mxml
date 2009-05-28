@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns="http://ns.adobe.com/mxml/2009"
+               xmlns:s="library://ns.adobe.com/flex/spark"
+               xmlns:sls="com.smartlogicsolutions.components.*">
+  
+  <Script>
+    private function enableButtons(doEnable:Boolean):void {
+      btn.enabled = failBtn.enabled = doEnable;
+    }
+  </Script>
+  
+  <s:layout>
+    <s:VerticalLayout />
+  </s:layout>
+  
+  <sls:LoginForm id="loginForm"
+                 skinClass="com.smartlogicsolutions.skins.LoginFormSkin"
+                 loginLabel="Login:" loggedInMessage="Sweet, logged in!"
+                 login="enableButtons(true)" />
+  
+  <s:HGroup>
+  
+    <s:Button id="btn" label="Set Login Success" enabled="false"
+              click="loginForm.loginSucceeded(); enableButtons(false)" />
+    
+    <s:Button id="failBtn" label="Set Login Failed" enabled="false"
+              click="loginForm.loginFailed(); enableButtons(false)" />
+    
+    <s:Button id="updateLoggingInMessage" label="Update Logging In Message"
+              click="loginForm.loggingInMessage = 'Trying to login'" />
+  </s:HGroup>
+
+</s:Application>

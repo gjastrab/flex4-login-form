@@ -1,0 +1,25 @@
+= Flex 4 LoginForm Component
+
+  Greg Jastrab <greg@smartlogicsolutions.com>
+  
+  NOTE: This version was built using the 7297 revision on the Flex SDK trunk.
+
+== DESCRIPTION
+
+The LoginForm is a Flex 4 component which encapsulates a login form containing:
+ * login & password labels
+ * login & password inputs
+ * login button
+ * login message
+
+A test application and sample skin are provided.
+
+A LoginEvent is dispatched when the login button is pressed, which triggers a state change
+to the "loggingIn" state.  The form will need to be told whether the login action was
+successful or unsuccessful.
+
+== FUTURE FEATURE IDEAS
+
+ * Form validations
+ * Extended RegistrationForm class
+ * Adding some transitions to the skin
